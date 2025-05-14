@@ -1,44 +1,17 @@
-# Recogonize Flowers with TensorFLow Lite Model Maker and Android Studio ML Model Binding
+# 基于TensorFlow Lite实现的Android花卉识别应用
+## 向应用中添加TensorFlow Lite
 
-This folder contains the code for the TensorFlow Lite codelab:
+## 定位“start”模块MainActivity.kt文件的TODO 1，添加初始化训练模型的代码
 
-* [Recognize Flowers with TensorFlow on Android (Beta)](https://goo.gle/3dbCSbt)
-
-## Introduction
-
-This beta codelab introduces the latest tooling using TensorFlow Lite Model Maker and Android Studio 4.1 Beta 1 or above. In addition, it will require access to a physical Android device to test. If you prefer to use the stable version of this codelab, follow this codelab instead.
-
-In these codelabs, you will learn:
-
-*   How to train your own custom image classifier using [TensorFlow Lite Model Maker](https://www.tensorflow.org/lite/tutorials/model_maker_image_classification).
-*   How to use Android Studio to import the TensorFlow Lite model to integrate the custom model in an Android app using CameraX.
-*   How to use GPU on your phone to accelerate your model.
+## 对图像进行处理并生成结果，主要包含下述操作：
+按照属性score对识别结果按照概率从高到低排序
+列出最高k种可能的结果，k的结果由常量MAX_RESULT_DISPLAY定义
 
 
-## Pre-requisites
 
-[Android Studio 4.1 Beta 1 or above](http://developers.android.com/studio/preview)
+## 将识别的结果加入数据对象Recognition 中，包含label和score两个元素。后续将用于RecyclerView的数据显示
 
-## Getting Started
+## 将原先用于虚拟显示识别结果的代码注释掉或者删除
 
-Visit the Google codelabs site to follow along the guided steps.
 
-## Support
-
-- Stack Overflow: https://stackoverflow.com/questions/tagged/tensorflow-lite+android-studio
-
-## License
-
- Copyright (C) 2020 The Android Open Source Project
- 
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
- 
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
+## 最终结果展示
